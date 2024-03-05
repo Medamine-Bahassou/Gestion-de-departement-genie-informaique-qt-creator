@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>prof</class>
+ <widget class="QDialog" name="prof">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>512</width>
+    <height>471</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Professeurs</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/img_file/teacher.png</normaloff>:/img_file/teacher.png</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="1">
+    <widget class="QLabel" name="label">
+     <property name="font">
+      <font>
+       <family>Times New Roman</family>
+       <pointsize>12</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Professeurs</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_delete">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* Style pour le bouton Filiers - Style moderne d'entreprise */
+#pushButton_delete {
+    background: #ffffff; /* Fond blanc */
+    color: #333333; /* Texte gris foncé */
+    padding: 15px 25px; /* Espacement autour du texte */
+    border: 2px solid #555555; /* Contour gris foncé */
+    border-radius: 22px; /* Coins arrondis */
+    font: 16px &quot;Helvetica Neue&quot;, sans-serif; /* Police sans-serif moderne */
+    cursor: pointer; /* Curseur pointer au survol */
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Animation de transition sur la couleur de fond, la couleur du texte et la couleur du contour */
+}
+
+/* Effet de survol pour le bouton Filiers */
+#pushButton_delete:hover {
+    background: #f1f1f1; /* Fond légèrement plus foncé au survol */
+    color: #555555; /* Texte gris un peu plus clair au survol */
+    border-color: #777777; /* Contour gris plus clair au survol */
+}
+
+/* Effet de pression pour le bouton Filiers */
+#pushButton_delete:active {
+    background: #e6e6e6; /* Fond légèrement plus foncé lorsqu'appuyé */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre lorsqu'appuyé */
+    transform: translateY(2px); /* Légère translation vers le bas pour l'effet de pression */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Supprimer</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_refrech">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* Style pour le bouton Filiers - Style moderne d'entreprise */
+#pushButton_refrech {
+    background: #ffffff; /* Fond blanc */
+    color: #333333; /* Texte gris foncé */
+    padding: 15px 25px; /* Espacement autour du texte */
+    border: 2px solid #555555; /* Contour gris foncé */
+    border-radius: 22px; /* Coins arrondis */
+    font: 16px &quot;Helvetica Neue&quot;, sans-serif; /* Police sans-serif moderne */
+    cursor: pointer; /* Curseur pointer au survol */
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Animation de transition sur la couleur de fond, la couleur du texte et la couleur du contour */
+}
+
+/* Effet de survol pour le bouton Filiers */
+#pushButton_refrech:hover {
+    background: #f1f1f1; /* Fond légèrement plus foncé au survol */
+    color: #555555; /* Texte gris un peu plus clair au survol */
+    border-color: #777777; /* Contour gris plus clair au survol */
+}
+
+/* Effet de pression pour le bouton Filiers */
+#pushButton_refrech:active {
+    background: #e6e6e6; /* Fond légèrement plus foncé lorsqu'appuyé */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre lorsqu'appuyé */
+    transform: translateY(2px); /* Légère translation vers le bas pour l'effet de pression */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Actualiser</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="1">
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>160</number>
+     </attribute>
+     <attribute name="verticalHeaderDefaultSectionSize">
+      <number>30</number>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>Nom</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Prénom</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>CIN</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="4" column="0" rowspan="2" colspan="2">
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QPushButton" name="pushButton_registre">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* Style pour le bouton Filiers - Style moderne d'entreprise */
+#pushButton_registre {
+    background: #ffffff; /* Fond blanc */
+    color: #333333; /* Texte gris foncé */
+    padding: 15px 25px; /* Espacement autour du texte */
+    border: 2px solid #555555; /* Contour gris foncé */
+    border-radius: 22px; /* Coins arrondis */
+    font: 16px &quot;Helvetica Neue&quot;, sans-serif; /* Police sans-serif moderne */
+    cursor: pointer; /* Curseur pointer au survol */
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Animation de transition sur la couleur de fond, la couleur du texte et la couleur du contour */
+}
+
+/* Effet de survol pour le bouton Filiers */
+#pushButton_registre:hover {
+    background: #f1f1f1; /* Fond légèrement plus foncé au survol */
+    color: #555555; /* Texte gris un peu plus clair au survol */
+    border-color: #777777; /* Contour gris plus clair au survol */
+}
+
+/* Effet de pression pour le bouton Filiers */
+#pushButton_registre:active {
+    background: #e6e6e6; /* Fond légèrement plus foncé lorsqu'appuyé */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre lorsqu'appuyé */
+    transform: translateY(2px); /* Légère translation vers le bas pour l'effet de pression */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Inscription</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item row="5" column="1">
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout"/>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

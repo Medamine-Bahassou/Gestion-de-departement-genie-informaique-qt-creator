@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img_file/1.jpg</file>
+        <file>img_file/2.png</file>
+        <file>img_file/3.jpg</file>
+        <file>img_file/4.jpg</file>
+        <file>img_file/Design sans titre (10).png</file>
+        <file>img_file/fst.png</file>
+        <file>img_file/login.jpg</file>
+        <file>img_file/modules.png</file>
+        <file>img_file/options.png</file>
+        <file>img_file/register.png</file>
+        <file>img_file/student.png</file>
+        <file>img_file/teacher.png</file>
+        <file>img_file/time.png</file>
+        <file>img option/login_icon_176151.png</file>
+        <file>img option/student.png</file>
+        <file>img option/teacher.png</file>
+        <file>img option/time.png</file>
+        <file>img_file/about icon.png</file>
+        <file>../../Data_base.db</file>
+    </qresource>
+</RCC>
